@@ -22,6 +22,8 @@ protocol ScrollViewDataSourceManagerProtocol: class, NSObjectProtocol {
     
     var isEmpty: Bool { get }
     
+    var pageSize : Int { get set }
+    
     // MARK: - subscript
     // 下标
     subscript(index: Int) -> T { get }

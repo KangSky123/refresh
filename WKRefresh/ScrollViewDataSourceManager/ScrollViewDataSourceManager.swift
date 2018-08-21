@@ -9,6 +9,8 @@ import UIKit
 import Foundation
 
 class ScrollViewDataSourceManager<DataSourceType>: NSObject, ScrollViewDataSourceManagerProtocol {
+    var pageSize: Int
+    
 
     // MARK: - typealias
     // 重定义数据源类型
@@ -23,6 +25,7 @@ class ScrollViewDataSourceManager<DataSourceType>: NSObject, ScrollViewDataSourc
     // MARK: - life cycle
     required init(_ scrollView: UIScrollView) {
         self.scrollView = scrollView
+        self.pageSize = 10
     }
 
 }

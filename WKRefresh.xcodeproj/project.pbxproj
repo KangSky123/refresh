@@ -86,28 +86,12 @@
 		27748342212C0EA90043963F /* ScrollViewDataSourceManager */ = {
 			isa = PBXGroup;
 			children = (
-				27748343212C0EA90043963F /* ScrollViewDataSourceManager */,
-				27748346212C0EA90043963F /* TableViewRefreshDataSourceManager */,
-			);
-			path = ScrollViewDataSourceManager;
-			sourceTree = "<group>";
-		};
-		27748343212C0EA90043963F /* ScrollViewDataSourceManager */ = {
-			isa = PBXGroup;
-			children = (
 				27748344212C0EA90043963F /* ScrollViewDataSourceManager.swift */,
 				27748345212C0EA90043963F /* ScrollViewDataSourceManagerProtocol.swift */,
-			);
-			path = ScrollViewDataSourceManager;
-			sourceTree = "<group>";
-		};
-		27748346212C0EA90043963F /* TableViewRefreshDataSourceManager */ = {
-			isa = PBXGroup;
-			children = (
 				27748347212C0EA90043963F /* ScrollViewRefreshManager.swift */,
 				27748348212C0EA90043963F /* ScrollViewRefreshManagerProtocol.swift */,
 			);
-			path = TableViewRefreshDataSourceManager;
+			path = ScrollViewDataSourceManager;
 			sourceTree = "<group>";
 		};
 		83B18278941290A87C0CDE4B /* Frameworks */ = {

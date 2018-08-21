@@ -89,12 +89,12 @@ extension ScrollViewRefreshManagerProtocol {
                 self?.scrollView.mj_header.endRefreshing()
                 // 判断 是否没有更多数据
                 if total == 0 {
-                    if let imageView = self?.getNoDataImageView() {
+//                    if let imageView = self?.getNoDataImageView() {
 //                        self?.scrollView.viewWithTag(Int.max / 4 + 1)?.removeFromSuperview()
 
 //                        self?.scrollView.addSubview(imageView)
-                    }
-                } else if total < pageSize {   //数据已经是全部加载  //let count = self?.sourceArr.count, count >= total
+//                    }
+                } else if total < (self?.pageSize)! {   //数据已经是全部加载  //let count = self?.sourceArr.count, count >= total
                     self?.scrollView.mj_footer.endRefreshingWithNoMoreData()
                     self?.scrollView.viewWithTag(Int.max / 4 + 1)?.removeFromSuperview()
                 } else {
@@ -113,7 +113,7 @@ extension ScrollViewRefreshManagerProtocol {
     // 上拉加载设置
     fileprivate func pullRefreshSetting() {
         scrollView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: { [unowned self] in
-            let page = NSInteger(self.sourceArr.count / pageSize)
+            let page = NSInteger(self.sourceArr.count / self.pageSize)
             print(page)
             self.delegate?.scrollViewRefresh(self.scrollView, skip: page + 1, success: { [weak self] (newData, total) in
                 // 需要先判断 是否该 tableView 实例需要的数据源
@@ -122,7 +122,7 @@ extension ScrollViewRefreshManagerProtocol {
                     self?.reloadData()
                 }
                 // 判断 是否没有更多数据
-                if total < pageSize {   //let count = self?.sourceArr.count, count >= total
+                if total < (self?.pageSize)! {   //let count = self?.sourceArr.count, count >= total
                     self?.scrollView.mj_footer.endRefreshingWithNoMoreData()
                 } else {
                     self?.scrollView.mj_footer.resetNoMoreData()
