@@ -75,11 +75,6 @@ extension ViewController: ScrollViewRefreshManagerDelegate {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
             //code
             print("1 秒后输出")
-            if skip == 1 {   //下拉刷新
-                
-            } else {   //上啦加载
-                
-            }
         }
 
         
