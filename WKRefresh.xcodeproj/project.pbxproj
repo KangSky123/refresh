@@ -17,6 +17,7 @@
 		2774834B212C0EAA0043963F /* ScrollViewRefreshManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27748347212C0EA90043963F /* ScrollViewRefreshManager.swift */; };
 		2774834C212C0EAA0043963F /* ScrollViewRefreshManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27748348212C0EA90043963F /* ScrollViewRefreshManagerProtocol.swift */; };
 		2774834E212C106F0043963F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2774834D212C106F0043963F /* Common.swift */; };
+		27748350212D47300043963F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2774834F212D47300043963F /* Model.swift */; };
 		2BE21E7BCB4C5AC2F9FD920B /* Pods_WKRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC858B54B13A204D65A5AA8F /* Pods_WKRefresh.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		27748347212C0EA90043963F /* ScrollViewRefreshManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewRefreshManager.swift; sourceTree = "<group>"; };
 		27748348212C0EA90043963F /* ScrollViewRefreshManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewRefreshManagerProtocol.swift; sourceTree = "<group>"; };
 		2774834D212C106F0043963F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		2774834F212D47300043963F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		39962FE235111672F61C6C7A /* Pods-WKRefresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKRefresh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WKRefresh/Pods-WKRefresh.debug.xcconfig"; sourceTree = "<group>"; };
 		7A0E89ACEA285B9C27526D3A /* Pods-WKRefresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKRefresh.release.xcconfig"; path = "Pods/Target Support Files/Pods-WKRefresh/Pods-WKRefresh.release.xcconfig"; sourceTree = "<group>"; };
 		EC858B54B13A204D65A5AA8F /* Pods_WKRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WKRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 				27748342212C0EA90043963F /* ScrollViewDataSourceManager */,
 				27748330212C0E3F0043963F /* AppDelegate.swift */,
 				27748332212C0E3F0043963F /* ViewController.swift */,
+				2774834F212D47300043963F /* Model.swift */,
 				2774834D212C106F0043963F /* Common.swift */,
 				27748334212C0E3F0043963F /* Main.storyboard */,
 				27748337212C0E3F0043963F /* Assets.xcassets */,
@@ -247,6 +250,7 @@
 				27748331212C0E3F0043963F /* AppDelegate.swift in Sources */,
 				2774834B212C0EAA0043963F /* ScrollViewRefreshManager.swift in Sources */,
 				2774834E212C106F0043963F /* Common.swift in Sources */,
+				27748350212D47300043963F /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,4 +9,7 @@
 import UIKit
 
 //let pageSize = 10
-
+// 屏幕宽
+let ScreenWidth = CGFloat(UIScreen.main.bounds.size.width)
+// 屏幕高
+let ScreenHeight = CGFloat(UIScreen.main.bounds.size.height)
