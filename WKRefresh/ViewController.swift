@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var arr = [Model]()
     var orderManager: ScrollViewRefreshManager<Model>!
     var orderArr: [Model] {
         if orderManager == nil {
@@ -50,13 +49,13 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)) as UITableViewCell
-        let model = arr[indexPath.row]
+        let model = orderArr[indexPath.row]
         cell.textLabel?.text = model.orderCode
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arr.count + 1
+        return orderArr.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -68,13 +67,31 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
 
 extension ViewController: ScrollViewRefreshManagerDelegate {
     func scrollViewRefresh(_ scrollView: UIScrollView, skip: Int, success: @escaping ([Any], Int) -> Void, fail: @escaping () -> Void) {
-        
+        //skip 是页码 即请求第几页的数据
             
         //延时1秒执行
         let time: TimeInterval = 2.0
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
             //code
             print("1 秒后输出")
+            let model = Model()
+            model.goodsCount = 1
+            model.orderCode = "123123"
+
+            var modelArr = [Model]()
+            modelArr.append(model)
+            modelArr.append(model)
+            modelArr.append(model)
+            modelArr.append(model)
+            modelArr.append(model)
+            modelArr.append(model)
+            modelArr.append(model)
+            modelArr.append(model)
+            modelArr.append(model)
+            if skip <= 2 {
+                modelArr.append(model)
+            }
+            success(modelArr,modelArr.count) //    modelArr是增加的数据,modelArr.count增加数据的条数,用于判断是否需要继续加载,默认为10 少于10条时,上啦不能继续加载
         }
 
         

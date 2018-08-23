@@ -25,7 +25,7 @@ class ScrollViewDataSourceManager<DataSourceType>: NSObject, ScrollViewDataSourc
     // MARK: - life cycle
     required init(_ scrollView: UIScrollView) {
         self.scrollView = scrollView
-        self.pageSize = 10
+        self.pageSize = 10         //每页请求的数量,需要的修改的可以在这
     }
 
 }
